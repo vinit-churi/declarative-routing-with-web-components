@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./router.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a route="/">Home</a></li>
+            <li><a route="/about/">About</a></li>
+            <li><a route="/contact/">Contact</a></li>
+            <li><a route="/users">Users</a></li>
+            <li><a route="/misc">Misc</a></li>
+        </ul>
+    </nav>
+    <!-- The tag name should comply with the web component standard -->
+    <wc-router>
+        <wc-route path="/" title="Home" component="wc-home">
+        </wc-route>
+        <wc-route path="/about" title="About Us" component="wc-about">
+        </wc-route>
+        <wc-route path="/users" title="Users" component="wc-users">
+        </wc-route>
+        <wc-route path="/users/:id" title="User Details" component="wc-userdetails">
+        </wc-route>
+        <wc-route path="/*" title="404" component="wc-notfound">
+        </wc-route>
+        <wc-outlet>
+        </wc-outlet>
+    </wc-router>
+
+</body>
+
+</html>
